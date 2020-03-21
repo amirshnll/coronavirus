@@ -20,7 +20,7 @@ class Web extends CI_Controller {
         $this->load->helper('security');
         $this->load->library('parser');
 
-        $view_name = "ui/author/" . xss_clean($view_name);
+        $view_name = xss_clean($view_name);
         $data = array(
             'base'  =>  $this->base_url()
         );
@@ -31,8 +31,40 @@ class Web extends CI_Controller {
         return true;
     }
 
+    private function base_url() {
+        $this->load->helper("url");
+        return base_url();
+    }
+
 
     /* Public */
+    public function index() {
+
+        $data = array();
+
+        $this->parser("index", $data);
+    }
+
+    public function detect() {
+
+        $data = array();
+
+        $this->parser("detect", $data);
+    }
+
+    public function statistics() {
+
+        $data = array();
+
+        $this->parser("statistics", $data);
+    }
+
+    public function export() {
+
+        $data = array();
+
+        $this->parser("export", $data);
+    }
 
 }
 

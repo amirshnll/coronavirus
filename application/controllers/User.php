@@ -20,7 +20,7 @@ class User extends CI_Controller {
         $this->load->helper('security');
         $this->load->library('parser');
 
-        $view_name = "ui/author/" . xss_clean($view_name);
+        $view_name = xss_clean($view_name);
         $data = array(
             'base'  =>  $this->base_url()
         );
@@ -31,8 +31,25 @@ class User extends CI_Controller {
         return true;
     }
 
+    private function base_url() {
+        $this->load->helper("url");
+        return base_url();
+    }
+
 
     /* Public */
+    public function index() {
+        $this->load->helper("url");
+        redirect($this->base_url());
+        return;
+    }
+
+    public function login() {
+
+        $data = array();
+
+        $this->parser("login", $data);
+    }
 
 }
 
