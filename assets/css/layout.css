@@ -14,7 +14,7 @@ div {
 box-sizing:border-box
 }
 
-body {
+.bootstrap_body {
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
@@ -26,6 +26,10 @@ body {
   justify-content: center;
   padding-top: 40px;
   padding-bottom: 40px;
+  background-color: #f5f5f5 !important;
+}
+
+body {
   background-color: #f5f5f5 !important;
 }
 
@@ -88,13 +92,13 @@ body {
   max-width: 40rem;
 }
 
-footer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-footer p {
-  margin-bottom: .25rem;
-}
-
 .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+.gray-box {
+  background: #e9ecef;
+  padding: 25px;
+}
+
+.myContent {
+  margin-top: 100px;
+}

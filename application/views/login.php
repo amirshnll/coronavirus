@@ -18,7 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   	<link rel="icon" href="{base}assets/img/favicon.png" type="image/png" sizes="32x32">
   </head>
 
-  <body class="text-center">
+  <body class="text-center bootstrap_body">
 
     <header>
       <!-- Fixed navbar -->

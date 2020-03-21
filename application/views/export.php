@@ -52,7 +52,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </nav>
     </header>
 
-    
+    <main class="myContent d-block">
+
+      <section class="text-center">
+        <div class="container gray-box">
+          <div class="row">
+            <div class="col-md-12">
+              <h1>Export</h1>
+               <h6 class="text-muted text-left">Detection Raw Data:</h6>
+              <div class="text-left" style="font-size: 13px;">
+                <pre><code><?php echo htmlspecialchars($xml_result, ENT_QUOTES); ?></code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <p>&nbsp;</p>
+      <p class="text-muted text-center">&copy; 2020 All rights reserved | <a class="text-muted" href="https://amirshnll.ir" title="A.shokri" target="_blank">A.shokri</a></p>
+      <p>&nbsp;</p>
+    </main>
 
     <script src="{base}assets/lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="{base}assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>

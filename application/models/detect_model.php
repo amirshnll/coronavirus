@@ -14,12 +14,13 @@ class Detect_model extends CI_Model {
         parent::__construct();
     }
 
-	public function insert($time, $user_agent, $ip, $content) {
+	public function insert($time, $user_agent, $ip, $content, $detect_rate) {
 		$data = array (
 			'time'					=> $time,
 			'user_agent'			=> $user_agent,
 			'ip'					=> $ip,
-			'content'				=> $content
+			'content'				=> $content,
+			'detect_rate'			=> $detect_rate
 		);
 		if( $this->db->insert('detect', $data) )
 			return true;
@@ -40,12 +41,13 @@ class Detect_model extends CI_Model {
         return $result;
 	}
 
-	public function update($id, $time, $user_agent, $ip, $content) {
+	public function update($id, $time, $user_agent, $ip, $content, $detect_rate) {
 		$data = array (
 			'time'					=> $time,
 			'user_agent'			=> $user_agent,
 			'ip'					=> $ip,
-			'content'				=> $content
+			'content'				=> $content,
+			'detect_rate'			=> $detect_rate
 		);
         if( $this->db->update('detect', $data, array('id' => $id)) )
         	return true;
