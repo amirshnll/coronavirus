@@ -36,6 +36,19 @@ class User extends CI_Controller {
         return base_url();
     }
 
+    private function time() {
+        return time();
+    }
+
+    private function user_agent() {
+        $this->load->library('user_agent');
+        return $this->agent->agent_string();
+    }
+
+    private function ip() {
+        return $this->input->ip_address();
+    }
+
 
     /* Public */
     public function index() {
@@ -47,6 +60,11 @@ class User extends CI_Controller {
     public function login() {
 
         $data = array();
+
+
+        $this->load->model("view_model");
+        $this->view_model->insert($this->time(), $this->user_agent(), $this->ip(), $this->router->fetch_class() . "/" . $this->router->fetch_method());
+
 
         $this->parser("login", $data);
     }

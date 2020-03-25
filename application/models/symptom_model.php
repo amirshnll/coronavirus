@@ -28,7 +28,6 @@ class Symptom_model extends CI_Model {
 	}
 
 	public function select($limit = 0) {
-		$this->db->order_by('id', 'DESC');
 		if($limit === 0)
 			$query = $this->db->get('symptom');
 		else

@@ -9,7 +9,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class View_model extends CI_Model {
 
 	/* Public */
-	`time`, `user_agent`, `ip`, `section`
 	public function __construct()
     {
         parent::__construct();

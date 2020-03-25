@@ -52,7 +52,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </nav>
     </header>
 
+    <main class="myContent d-block">
 
+      <section class="text-center">
+        <div class="container gray-box">
+          <div class="row">
+            <div class="col-md-12">
+              <h1>Detect</h1>
+              <p>{form_error}</p>
+              {detect_form}
+            </div>
+          </div>
+        </div>
+      </section>
+      <p>&nbsp;</p>
+      <p class="text-muted text-center">&copy; 2020 All rights reserved | <a class="text-muted" href="https://amirshnll.ir" title="A.shokri" target="_blank">A.shokri</a></p>
+      <p>&nbsp;</p>
+    </main>
 
     <script src="{base}assets/lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="{base}assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>

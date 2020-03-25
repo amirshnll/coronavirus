@@ -61,7 +61,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <h1>Export</h1>
                <h6 class="text-muted text-left">Detection Raw Data:</h6>
               <div class="text-left" style="font-size: 13px;">
-                <pre><code><?php echo htmlspecialchars($xml_result, ENT_QUOTES); ?></code></pre>
+                <pre style="white-space:pre-wrap; word-wrap: break-word; word-break: break-all;"><code><?php echo htmlspecialchars(str_replace("&quot;", '"', $xml_result), ENT_QUOTES); ?></code></pre>
               </div>
             </div>
           </div>
