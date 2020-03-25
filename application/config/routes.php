@@ -61,9 +61,12 @@ $route['impact_factors'] 						= 'User/impact_factors';
 $route['country_data'] 							= 'User/country_data';
 $route['out'] 									= 'User/out';
 $route['auth'] 									= 'User/auth';
+$route['update_factors'] 						= 'User/update_factors';
+$route['update_country'] 						= 'User/update_country';
 
 
 $route[''] 										= 'Web/index';
 $route['detect'] 								= 'Web/detect';
 $route['statistics'] 							= 'Web/statistics';
 $route['export'] 								= 'Web/export';
+$route['detection'] 							= 'Web/detection';

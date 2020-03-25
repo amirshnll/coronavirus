@@ -74,6 +74,13 @@ class Symptom_model extends CI_Model {
 		return $this->db->count_all('symptom');
 	}
 
+	public function update_batch($data) {
+		if($this->db->update_batch('symptom', $data, 'id'))
+			return true;
+		else
+			return false;
+	}
+
 }
 
 ?>

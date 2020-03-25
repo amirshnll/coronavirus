@@ -75,6 +75,13 @@ class Country_model extends CI_Model {
 		return $this->db->count_all('country');
 	}
 
+	public function update_batch($data) {
+		if($this->db->update_batch('country', $data, 'id'))
+			return true;
+		else
+			return false;
+	}
+
 }
 
 ?>

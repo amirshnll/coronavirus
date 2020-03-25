@@ -56,6 +56,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="row">
             <div class="col-md-12">
               <h1>Imapct Factors</h1>
+              <p>{form_error}</p>
+              {impact_form}
             </div>
           </div>
         </div>

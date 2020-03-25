@@ -71,7 +71,7 @@ class Web extends CI_Controller {
         $detect_form = "";
         if($symptom!==false && is_array($symptom)) {
             $detect_form .= form_open(
-                $this->base_url() . "web/detection",
+                $this->base_url() . "detection",
                 array(
                     "class"     =>  "form-group text-left"
                 )
@@ -81,7 +81,7 @@ class Web extends CI_Controller {
 
             foreach ($symptom as $key => $value) {
                 if($value['type']==1) {
-                    $detect_form .= "<label for='input_'" . strtolower(str_replace(" ", "", $value['title'])) . "'>" . $value['title'] . "<sup class='text-danger text-bold'>*</sup></label>";
+                    $detect_form .= "<label for='input_" . strtolower(str_replace(" ", "", $value['title'])) . "'>" . $value['title'] . "<sup class='text-danger text-bold'>*</sup></label>";
                     $detect_form .= form_input(
                         array(
                             "name"          =>  strtolower(str_replace(" ", "", "input_" .  $value['title'])),
@@ -93,13 +93,23 @@ class Web extends CI_Controller {
                     $detect_form .= "<br />";
                 }
                 elseif($value['type']==2) {
-                    $detect_form .= "<label for='input_'" . strtolower(str_replace(" ", "", $value['title'])) . "'>" . $value['title'] . "<sup class='text-danger text-bold'>*</sup></label>";
-                    $detect_form .= form_dropdown(
-                        strtolower(str_replace(" ", "", "input_" .  $value['title'])),
-                        array(
+                    $detect_form .= "<label for='input_" . strtolower(str_replace(" ", "", $value['title'])) . "'>" . $value['title'] . "<sup class='text-danger text-bold'>*</sup></label>";
+                    if(strtolower(str_replace(" ", "", $value['title'])) == "sex")
+                    {
+                        $options = array(
+                            "0"    =>  "Please Select...",
+                             "1" =>  "Male",
+                               "2" =>  "Female");
+                    }
+                    else {
+                        $options = array(
                             "0"    =>  "Please Select...",
                              "1" =>  "Yes",
-                               "2" =>  "No"),
+                               "2" =>  "No");
+                    }
+                    $detect_form .= form_dropdown(
+                        strtolower(str_replace(" ", "", "input_" .  $value['title'])),
+                        $options,
                         0,
                         array(
                             "id" =>  strtolower(str_replace(" ", "", "input_" .  $value['title'])),
