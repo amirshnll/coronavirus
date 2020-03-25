@@ -67,6 +67,17 @@ class User_model extends CI_Model {
         return $result;
 	}
 
+	public function login_select($username, $password) {
+		$this->db->where('username', $username);
+		$this->db->where('password', $password);
+		$query = $this->db->get('user', 1);
+
+        $result = $query->result_array();
+        if($query->num_rows() < 1)
+        	$result = false;
+        return $result;
+	}
+
 	public function count() {
 		return $this->db->count_all('user');
 	}

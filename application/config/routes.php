@@ -56,6 +56,12 @@ $route['translate_uri_dashes']					= FALSE;
 
 /* /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ My Rouths /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\  */
 $route['login'] 								= 'User/login';
+$route['panel'] 								= 'User/panel';
+$route['impact_factors'] 						= 'User/impact_factors';
+$route['country_data'] 							= 'User/country_data';
+$route['out'] 									= 'User/out';
+$route['auth'] 									= 'User/auth';
+
 
 $route[''] 										= 'Web/index';
 $route['detect'] 								= 'Web/detect';

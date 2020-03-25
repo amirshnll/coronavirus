@@ -403,7 +403,7 @@ $config['sess_regenerate_destroy'] = FALSE;
 $config['cookie_prefix']	= '';
 $config['cookie_domain']	= '';
 $config['cookie_path']		= '/';
-$config['cookie_secure']	= FALSE;
+$config['cookie_secure']	= true;
 $config['cookie_httponly'] 	= FALSE;
 
 /*
@@ -448,7 +448,7 @@ $config['global_xss_filtering'] = FALSE;
 | 'csrf_regenerate' = Regenerate token on every submission
 | 'csrf_exclude_uris' = Array of URIs which ignore CSRF checks
 */
-$config['csrf_protection'] = FALSE;
+$config['csrf_protection'] = TRUE;
 $config['csrf_token_name'] = 'csrf_nll_corona';
 $config['csrf_cookie_name'] = 'csrf_cookie_nll_corona';
 $config['csrf_expire'] = 7200;

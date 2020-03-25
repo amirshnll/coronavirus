@@ -237,6 +237,9 @@ class Web extends CI_Controller {
         $this->load->model("symptom_model");
         $symptom = $this->symptom_model->select();
 
+        $this->load->model("view_model");
+        $this->view_model->insert($this->time(), $this->user_agent(), $this->ip(), $this->router->fetch_class() . "/" . $this->router->fetch_method());
+
         $this->load->library("form_validation");
         $this->load->database();
         $this->load->helper("url");

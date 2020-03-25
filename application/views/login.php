@@ -52,14 +52,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </nav>
     </header>
 
-    <form class="form-signin">
+    <form class="form-signin" method="post" action="{base}auth">
+      <input type="hidden" name="<?php echo $this->security->get_csrf_token_name();?>" value="<?php echo $this->security->get_csrf_hash();?>">
       <img class="mb-4" src="{base}assets/img/logo.png" alt="" width="72" height="72">
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
       <label for="inputUsername" class="sr-only">Username</label>
-      <input type="username" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+      <input type="username" id="inputUsername" class="form-control"name="username" placeholder="Username" required autofocus>
       <label for="inputPassword" class="sr-only">Password</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+      <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" required>
       <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      <br />
+      {form_error}
       <p class="mt-5 mb-3 text-muted">&copy; 2020 All rights reserved | <a class="text-muted" href="https://amirshnll.ir" title="A.shokri" target="_blank">A.shokri</a></p>
       <p><a class="text-muted" href="{base}" title="Back To Home">Back To Home</a></p>
     </form>
