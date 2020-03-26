@@ -38,3 +38,13 @@ coronavirus Detect &amp; Online Tools
 * Save Users Detect Log
 
 ** **
+
+##### Screenshot
+![statistics page](https://camelcase.ir/wp-content/uploads/coronavirus_statistics-min.png)
+![panel page](https://camelcase.ir/coronavirus_panel-min.png)
+![login page](https://camelcase.ir/wp-content/uploads/coronavirus_login-min.png)
+![impact factors page](https://camelcase.ir/wp-content/uploads/coronavirus_impact_factor-min.png)
+![home page](https://camelcase.ir/wp-content/uploads/coronavirus_home-min.png)
+![export page](https://camelcase.ir/wp-content/uploads/coronavirus_export-min.png)
+![detect page](https://camelcase.ir/wp-content/uploads/coronavirus_detect-min.png)
+![database](https://camelcase.ir/wp-content/uploads/coronavirus_database-min.png)
